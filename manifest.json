@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Plan Zajęć UEK",
+  "version": "1.1",
+  "description": "Usprawnia przeglądanie planu zajęć: ciemny motyw, filtrowanie przedmiotów i widok dni.",
+  "content_scripts": [
+    {
+      "matches": ["*://planzajec.uek.krakow.pl/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+#plan-enhancer-toolbar {
+  background-color: #1e4631;
+  color: #ffffff;
+  padding: 12px 24px;
+  margin: 0 auto 20px auto;
+  width: 96%;
+  max-width: 1800px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.toolbar-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#plan-enhancer-toolbar button {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+#plan-enhancer-toolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#plan-subject-filter-panel {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 0 auto 20px auto;
+  width: 96%;
+  max-width: 1800px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  display: none;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#plan-subject-filter-panel h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.subject-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 12px;
+}
+
+.subject-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #334155;
+  text-align: left;
+}
+
+.subject-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #1e4631;
+}
+
+#plan-date-filter-bar {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 14px 24px;
+  margin: 15px auto 25px auto;
+  width: fit-content;
+  max-width: 96%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.date-inputs-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.date-inputs-group input[type="date"] {
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #0f172a;
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.date-quick-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.date-quick-buttons button {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.date-quick-buttons button:hover {
+  background-color: #1e4631;
+  color: #ffffff;
+  border-color: #1e4631;
+}
+
+.date-quick-buttons button.btn-load-semester {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-color: #bae6fd;
+}
+
+.date-quick-buttons button.btn-load-semester:hover {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.empty-state-message {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+#plan-calendar-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 96%;
+  max-width: 1800px;
+  margin: 15px auto 40px auto;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  text-align: left;
+}
+
+.day-card {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.day-header {
+  background-color: #1e4631;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-header-count {
+  font-size: 12px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.18);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.day-classes {
+  display: flex;
+  flex-direction: column;
+}
+
+.class-item {
+  display: grid;
+  grid-template-columns: 180px minmax(280px, 1fr) 300px 170px;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+  text-align: left;
+}
+
+.class-item:last-child {
+  border-bottom: none;
+}
+
+.class-item:hover {
+  background-color: #f8fafc;
+}
+
+.class-item.cancelled {
+  background-color: #fef2f2;
+  border-left: 4px solid #ef4444;
+}
+
+.class-time {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 14px;
+  text-align: left;
+}
+
+.class-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.class-subject {
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.class-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-wyklad {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-cwiczenia {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge-cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-remarks {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.class-teacher {
+  font-size: 14px;
+  color: #475569;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.class-room {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  color: #334155;
+}
+
+.class-room a {
+  display: inline-block;
+  background-color: #1e4631;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.class-room a:hover {
+  background-color: #143322;
+}
+
+@media (max-width: 1024px) {
+  .class-item {
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+  }
+  .class-teacher {
+    grid-column: 2;
+  }
+  .class-room {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .class-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .class-teacher,
+  .class-room {
+    grid-column: 1;
+    text-align: left;
+  }
+}
+
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode #plan-enhancer-toolbar {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode #plan-enhancer-toolbar button {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode #plan-enhancer-toolbar button:hover {
+  background-color: #475569 !important;
+}
+
+body.dark-mode #plan-subject-filter-panel,
+body.dark-mode #plan-date-filter-bar,
+body.dark-mode .day-card,
+body.dark-mode .empty-state-message {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode #plan-subject-filter-panel h3,
+body.dark-mode .date-inputs-group,
+body.dark-mode .subject-item,
+body.dark-mode .class-time,
+body.dark-mode .class-subject,
+body.dark-mode .class-room {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .date-inputs-group input[type="date"] {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+  color-scheme: dark;
+}
+
+body.dark-mode .date-quick-buttons button {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .date-quick-buttons button:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+}
+
+body.dark-mode .day-header {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid #334155 !important;
+  color: #f8fafc !important;
+}
+
+body.dark-mode .day-header-count {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .class-teacher {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .class-item {
+  border-bottom-color: #334155 !important;
+}
+
+body.dark-mode .class-item:hover {
+  background-color: #263349 !important;
+}
+
+body.dark-mode .class-item.cancelled {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-left-color: #ef4444 !important;
+}
+
+body.dark-mode .badge-wyklad {
+  background-color: rgba(56, 189, 248, 0.15) !important;
+  color: #7dd3fc !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+body.dark-mode .badge-cwiczenia {
+  background-color: rgba(251, 191, 36, 0.15) !important;
+  color: #fde68a !important;
+  border: 1px solid rgba(251, 191, 36, 0.3) !important;
+}
+
+body.dark-mode .badge-remarks {
+  background-color: rgba(74, 222, 128, 0.15) !important;
+  color: #86efac !important;
+  border: 1px solid rgba(74, 222, 128, 0.3) !important;
+}
+
+body.dark-mode .badge-cancelled {
+  background-color: rgba(248, 113, 113, 0.15) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(248, 113, 113, 0.3) !important;
+}
+
+body.dark-mode .class-room a {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .class-room a:hover {
+  background-color: #1d4ed8 !important;
+}
+
+body.dark-mode table {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode th {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode td {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode tr.czerwony td {
+  color: #fca5a5 !important;
+}
+
+body.dark-mode td.uwagi {
+  color: #86efac !important;
+}
+
+body.dark-mode a {
+  color: #60a5fa !important;
+}
+
+body.dark-mode select, 
+body.dark-mode input {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #475569 !important;
+}
