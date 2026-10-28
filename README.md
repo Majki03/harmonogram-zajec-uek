@@ -34,5 +34,5 @@ Rozszerzenie może działać również na smartfonach (Android oraz iOS):
 
 ### Opcja B: Dodatek Tampermonkey (Android Firefox/Edge oraz iOS Safari)
 1. Zainstaluj w przeglądarce dodatek **Tampermonkey** (lub **Userscripts** na iOS).
-2. Kliknij na plik `lepszy-plan-mobilny.user.js` znajdujący się na liście plików powyżej, a następnie kliknij przycisk **`Raw`** w prawym górnym rogu ramki z kodem.
+2. Kliknij na plik `plan-mobilny.user.js` znajdujący się na liście plików powyżej, a następnie kliknij przycisk **`Raw`** w prawym górnym rogu ramki z kodem.
 3. Tampermonkey automatycznie wykryje skrypt i wyświetli przycisk **Zainstaluj** (*Install*).
